@@ -1,0 +1,196 @@
+.mainContainer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #453f3f;
+}
+
+.secContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 80%;
+  background-color: #FEFFFE;
+}
+
+.widRow {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 45%;
+  width: 100%;
+}
+
+.widget {
+  background-color: #453f3f;
+  width: 20%;
+  height: 85%;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.widget:hover {
+  transform: scale(1.1);
+}
+
+.tituloPdt {
+  background: url(../img/titulo1.jpg) no-repeat center/cover;
+}
+
+.gameMain {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #453f3f;
+}
+
+.gameMain .gameContainer {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  height: 85%;
+  background-color: #BFD7EA;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px black;
+}
+
+.gameMain .gameContainer .manos {
+  display: flex;
+  width: 100%;
+  height: 70%;
+}
+
+.gameMain .gameContainer .manos .mano1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45%;
+  height: 100%;
+}
+
+.gameMain .gameContainer .manos .mano1 .manoBg {
+  border: 5px solid #0B3954;
+  width: 70%;
+  height: 70%;
+  background-color: #FEFFFE;
+}
+
+.gameMain .gameContainer .manos .mano1 .manoBg #mano1 {
+  background: url(../img/rock.png) no-repeat center/cover;
+}
+
+.gameMain .gameContainer .manos .mano1 .manoBg .manoImg {
+  width: 100%;
+  height: 100%;
+}
+
+.gameMain .gameContainer .manos .mano2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45%;
+  height: 100%;
+}
+
+.gameMain .gameContainer .manos .mano2 .manoBg {
+  border: 5px solid #0B3954;
+  width: 70%;
+  height: 70%;
+  background-color: #FEFFFE;
+}
+
+.gameMain .gameContainer .manos .mano2 .manoBg #mano2 {
+  background: url(../img/rock.png) no-repeat center/cover;
+}
+
+.gameMain .gameContainer .manos .mano2 .manoBg .manoImg {
+  width: 100%;
+  height: 100%;
+}
+
+.gameMain .gameContainer .manos .vs {
+  width: 10%;
+  height: 100%;
+  background: url(../img/vs.png) no-repeat center/contain;
+}
+
+.gameMain .gameContainer .manoBottom {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 30%;
+  border-top: 2px solid #291F1E;
+  background-color: #291F1E;
+}
+
+.gameMain .gameContainer .manoBottom .buttonBg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+  height: 55%;
+  background-color: #291F1E;
+  border: 2px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.gameMain .gameContainer .manoBottom .buttonBg:hover {
+  transform: scale(1.2);
+}
+
+.gameMain .gameContainer .manoBottom .buttonBg .playButton {
+  width: 100%;
+  height: 100%;
+}
+
+.gameMain .gameContainer .manoBottom .buttonBg #rock {
+  background: url(../img/rock.png) no-repeat center/cover;
+}
+
+.gameMain .gameContainer .manoBottom .buttonBg #papper {
+  background: url(../img/papper.png) no-repeat center/cover;
+}
+
+.gameMain .gameContainer .manoBottom .buttonBg #scissor {
+  background: url(../img/scissors.png) no-repeat center/cover;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.backButton {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 5vh;
+  left: 3vw;
+  width: 50px;
+  height: 50px;
+  color: #FEFFFE;
+  font-size: 3rem;
+  box-shadow: 0px 2px 3px black;
+  border-radius: 50%;
+  background-color: #393434;
+  transition: 0.3s;
+}
+
+.backButton:hover {
+  transform: scale(1.2);
+  color: #FEFFFE;
+  box-shadow: 0px 0px 10px white;
+  border: 2px solid white;
+  text-decoration: none;
+}
+/*# sourceMappingURL=style.css.map */

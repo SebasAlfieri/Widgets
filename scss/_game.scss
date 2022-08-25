@@ -1,0 +1,144 @@
+.gameMain{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #453f3f;
+
+  .gameContainer{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 85%;
+    background-color: #BFD7EA;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px black;
+
+    .manos{
+      display: flex;
+      width: 100%;
+      height: 70%;
+
+      .mano1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 45%;
+        height: 100%;
+
+        .manoBg{
+          border: 5px solid #0B3954;
+          width: 70%;
+          height: 70%;
+          background-color: #FEFFFE;
+
+          #mano1{
+            background: url(../img/rock.png) no-repeat center / cover;
+          }
+
+          .manoImg{
+            width: 100%;
+            height: 100%;
+          }
+        }
+        
+      }
+
+      .mano2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 45%;
+        height: 100%;
+
+        .manoBg{
+          border: 5px solid #0B3954;
+          width: 70%;
+          height: 70%;
+          background-color: #FEFFFE;
+
+          #mano2{
+            background: url(../img/rock.png) no-repeat center / cover;
+          }
+
+          .manoImg{
+            width: 100%;
+            height: 100%;
+          }
+        }
+        
+      }
+
+      .vs{
+        width: 10%;
+        height: 100%;
+        background: url(../img/vs.png) no-repeat center / contain;
+      }
+    }
+
+    .manoBottom{
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 100%;
+      height: 30%;
+      border-top: 2px solid #291F1E;
+      background-color: #291F1E;
+
+      .buttonBg{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 10%;
+        height: 55%;
+        background-color: #291F1E;
+        border: 2px solid white;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: 0.3s;
+
+          &:hover{
+            transform: scale(1.2);
+          }
+          .playButton{
+            width: 100%;
+            height: 100%;
+
+          }
+
+          #rock{
+            background: url(../img/rock.png) no-repeat center / cover;
+          }
+          #papper{
+            background: url(../img/papper.png) no-repeat center / cover;
+          }
+          #scissor{
+            background: url(../img/scissors.png) no-repeat center / cover;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
