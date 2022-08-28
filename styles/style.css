@@ -31,6 +31,7 @@
   height: 85%;
   border-radius: 5px;
   transition: 0.3s;
+  outline: 3px solid #453f3f;
 }
 
 .widget:hover {
@@ -39,6 +40,18 @@
 
 .tituloPdt {
   background: url(../img/titulo1.jpg) no-repeat center/cover;
+}
+
+.tituloClock {
+  background: url(../img/clockBack.jpg) no-repeat center/cover;
+}
+
+.tituloQuotes {
+  background: url(../img/quotesback.jpg) no-repeat center/cover;
+}
+
+.tituloWeather {
+  background: url(../img/climaBack.jpg) no-repeat center/cover;
 }
 
 .gameMain {
@@ -164,6 +177,204 @@
   background: url(../img/scissors.png) no-repeat center/cover;
 }
 
+#clockBody {
+  overflow: hidden;
+}
+
+.mainClock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.nightVid {
+  position: absolute;
+  width: 100vw;
+  z-index: 0;
+}
+
+.clockContainer {
+  font-family: clock;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid white;
+  box-shadow: 0px 0px 30px white;
+  color: #c3d1db;
+  font-size: 20rem;
+  width: 90%;
+  height: 80%;
+  background-color: rgba(40, 37, 37, 0.654);
+  z-index: 10;
+}
+
+#nightMode,
+#dayMode {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 5vh;
+  right: 3vw;
+  width: 50px;
+  height: 50px;
+  color: #FEFFFE;
+  font-size: 3rem;
+  box-shadow: 0px 2px 3px black;
+  border-radius: 50%;
+  background-color: #393434;
+  transition: 0.3s;
+  z-index: 20;
+}
+
+#nightMode:hover,
+#dayMode:hover {
+  transform: scale(1.2);
+  color: #FEFFFE;
+  box-shadow: 0px 0px 10px white;
+  border: 2px solid white;
+  text-decoration: none;
+}
+
+#dayMode {
+  display: none;
+}
+
+#quoteBody {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #f6dee2;
+  transition: 10s;
+}
+
+#quoteBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 8rem;
+  width: 70vw;
+  height: 40vh;
+  background-color: white;
+  border: 3px solid #343131;
+  border-radius: 10px;
+  opacity: 0.6;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+#quoteBtn:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+#wBody {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(../img/buenosaires.jpg) no-repeat center/cover;
+  height: 100vh;
+}
+
+.wContainer {
+  display: grid;
+  height: 50vh;
+  width: 30vw;
+  background-color: white;
+  grid-template-areas: "localidad localidad"  "icono temp" "data data";
+  grid-template-columns: 5fr 6fr;
+  grid-template-rows: 3fr 5fr 5fr;
+  box-shadow: 10px 10px 10px black;
+  border: 2px solid black;
+}
+
+#localidad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #b1e4e4;
+  grid-area: localidad;
+  font-size: 2.5rem;
+}
+
+#wIcon {
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+#iconCont {
+  grid-area: icono;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#temp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: temp;
+  font-size: 3rem;
+}
+
+#data {
+  grid-area: data;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.5rem;
+  border-top: 1px solid black;
+}
+
+#dataBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 10px;
+  justify-content: start;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+}
+
+.wNav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 5vh;
+  background-color: #fff;
+}
+
+.wNavDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #e9e0e0;
+}
+
+.wNavDiv:hover {
+  background-color: #312f2f;
+  color: white;
+  cursor: pointer;
+}
+
+.backWeather {
+  margin-top: 10vh;
+}
+
+@font-face {
+  font-family: clock;
+  src: url(../@font-face/alarmclock.ttf);
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -184,6 +395,7 @@
   border-radius: 50%;
   background-color: #393434;
   transition: 0.3s;
+  z-index: 20;
 }
 
 .backButton:hover {

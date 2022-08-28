@@ -1,0 +1,29 @@
+#quoteBody{
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #f6dee2;
+  transition: 10s;
+}
+
+#quoteBtn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 8rem;
+  width: 70vw;
+  height: 40vh;
+  background-color: white;
+  border: 3px solid rgb(52, 49, 49);
+  border-radius: 10px;
+  opacity: 0.6;
+  transition: 0.5s;
+  cursor: pointer;
+
+  &:hover{
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+

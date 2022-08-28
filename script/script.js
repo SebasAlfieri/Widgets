@@ -48,7 +48,10 @@ function conteo() {
 }
 
 function alertWin() {
-  scoreWin ++
+  scoreWin ++;
+  if (scoreWin >= 1){
+    localStorage.setItem("Wins", scoreWin);
+  }
   toastScore()
   Swal.fire({
     title: 'Ganaste!',
@@ -67,6 +70,9 @@ function alertWin() {
 
 function alertLose() {
   scoreLose ++
+  if (scoreLose >= 1){
+    localStorage.setItem("Loses", scoreLose);
+  }
   toastScore()
   Swal.fire({
     title: 'Perdiste :(',
@@ -187,3 +193,17 @@ rock.addEventListener('click', () => {
     }
   }, 1500);
 })
+
+
+function localWins(){
+
+
+if (localStorage.getItem("Wins", scoreWin) >= 1){
+  scoreWin = localStorage.getItem("Wins", scoreWin)
+}
+if (localStorage.getItem("Loses", scoreLose) >= 1){
+  scoreLose = localStorage.getItem("Loses", scoreLose)
+}
+}
+
+localWins()

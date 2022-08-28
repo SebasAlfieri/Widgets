@@ -1,5 +1,13 @@
 @import 'index';
 @import 'game';
+@import 'clock';
+@import 'quote';
+@import 'weather';
+
+@font-face {
+  font-family: clock;
+  src: url(../@font-face/alarmclock.ttf);
+}
 
 *{
   padding: 0;
@@ -21,6 +29,7 @@
   border-radius: 50%;
   background-color: #393434;
   transition: 0.3s;
+  z-index: 20;
   &:hover{
     transform: scale(1.2);
     color: #FEFFFE;
