@@ -13,56 +13,55 @@ uruguay = document.querySelector('#uruguay')
 paraguay = document.querySelector('#paraguay')
 bolivia = document.querySelector('#bolivia')
 newYork = document.querySelector('#newYork')
-pais = "Buenos%20Aires"
-
-
-
-
+pais = ""
 
 function fetchBA () {
-  fetch ('http://api.weatherstack.com/current?access_key=49c8f731ad28deb2508d7c4cb6ebcdee&query='+pais)
+  fetch ('https://api.open-meteo.com/v1/forecast?' + pais + '&daily=temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,sunrise,sunset,precipitation_sum,rain_sum,showers_sum&current_weather=true&timezone=auto')
   .then( (resp) => resp.json())
   .then( (data) => {
     console.log(data)
-    temp.innerText = `${data.current.temperature}°C`
-    term.innerText = `Sens. Termica: ${data.current.feelslike}°C`
-    localidad.innerText = `${data.location.name}`
-    wIcon.src = `${data.current.weather_icons}`
-    wIconText.innerText = `${data.current.weather_descriptions}`
-    visib.innerText = `Visibilidad: ${data.current.visibility}`
-    humed.innerText = `Humedad: ${data.current.humidity}`
-    precip.innerText = `Probabilidades de Precipitaciones: ${data.current.precip}%`
-
+    temp.innerText = `${data.current_weather.temperature}°C`
+    term.innerText = `Sens. Termica: ${data.current_weather.windspeed}°C`
+    wIcon.innerText = `Max ${data.daily.temperature_2m_max[0]}°C`
+    wIconText.innerText = `Min ${data.daily.temperature_2m_max[0]}°C`
+    visib.innerText = `Termica Max: ${data.daily.apparent_temperature_max[0]}°C`
+    humed.innerText = `Termica Min: ${data.daily.apparent_temperature_min[0]}°C`
   })
 }
 
 
 buenosAires.addEventListener('click',()=>{
-  pais = "Buenos%20Aires"
+  pais = "latitude=-34.55&longitude=-58.55"
+  localidad.innerText = `Buenos Aires`
   fetchBA ()
 })
 
 chile.addEventListener('click',()=>{
-  pais = "chile"
+  pais = "latitude=-33.45&longitude=-70.64"
+  localidad.innerText = `Chile`
   fetchBA ()
 })
 
 uruguay.addEventListener('click',()=>{
-  pais = "uruguay"
+  pais = "latitude=-34.90&longitude=-56.18"
+  localidad.innerText = `Uruguay`
   fetchBA ()
 })
 
 paraguay.addEventListener('click',()=>{
-  pais = "paraguay"
+  pais = "latitude=-23.44&longitude=-58.44"
+  localidad.innerText = `Paraguay`
   fetchBA ()
 })
 
 bolivia.addEventListener('click',()=>{
-  pais = "bolivia"
+  pais = "latitude=-16.29&longitude=-63.58"
+  localidad.innerText = `Bolivia`
   fetchBA ()
 })
 
 newYork.addEventListener('click',()=>{
-  pais = "New%20York"
+  pais = "latitude=40.71&longitude=-74.00"
+  localidad.innerText = `Nueva York`
   fetchBA ()
 })

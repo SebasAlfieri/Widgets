@@ -27,9 +27,6 @@ async function randomQuote() {
     background: '#fff url(../img/quotesback.webp)',
     backdrop: `
       rgba(0,0,123,0.4)
-      url("/images/nyan-cat.gif")
-      left top
-      no-repeat
     `
   }).then((result) => {
     if (result.isConfirmed) {
