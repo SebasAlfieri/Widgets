@@ -6,75 +6,77 @@
   height: 100vh;
   background: rgb(148,123,211);
   background: linear-gradient(180deg, rgba(148,123,211,1) 54%, rgba(240,167,160,1) 89%);
-}
 
-.shopContainer{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
-  width: 50vw;
-  height: 70vh;
-  border-radius: 20px;
-  border: 3px solid #05299E;
-  background-color: rgba(255, 255, 255, 0.295);
-
-  
-  .showValor{
+  .shopContainer{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #F0A7A0;
-
-    .valorText{
-      width: 100%;
-    }
-
-    #valorMostrar{
-      text-align: center;
-      width: 100%;
-    }
-  }
-
-  .shopInputs{
-    margin-top: 5vh;
-    margin-bottom: 5vh;
-    height: 20%;
-
-    input{
+    background-color: #fff;
+    width: 50vw;
+    height: 70vh;
+    border-radius: 20px;
+    border: 3px solid #05299E;
+    background-color: rgba(255, 255, 255, 0.295);
+  
+    
+    .showValor{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       background-color: #F0A7A0;
-      border: 1px solid #05299E;
-    }
-  }
-
-  .listContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80%;
-    width: 100%;
-    overflow-y: auto;
-
-    }
-
-    .list{
-      width: 70%;
-      background-color: #fff;
-      text-align: center;
-      margin-bottom: 5vh;
-
-      .productos{
-        display: flex;
+  
+      .valorText{
         width: 100%;
-        justify-content: space-evenly;
-        background-color: #F0A7A0;
-        border: 1px solid black;
+      }
+  
+      #valorMostrar{
+        text-align: center;
+        width: 100%;
       }
     }
-
-
-  }
+  
+    .shopInputs{
+      margin-top: 5vh;
+      margin-bottom: 5vh;
+      height: 20%;
+  
+      input{
+        background-color: #F0A7A0;
+        border: 1px solid #05299E;
+      }
+    }
+  
+    .listContainer{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80%;
+      width: 100%;
+      overflow-y: auto;
+  
+      }
+  
+      .list{
+        width: 70%;
+        background-color: #fff;
+        text-align: center;
+        margin-bottom: 5vh;
+  
+        .productos{
+          display: flex;
+          width: 100%;
+          justify-content: space-evenly;
+          background-color: #F0A7A0;
+          border: 1px solid black;
+        }
+      }
+  
+  
+    }
+  
+  
+}
 
 

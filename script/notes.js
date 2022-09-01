@@ -11,23 +11,6 @@ n8 =  document.querySelector('.n8')
 n9 =  document.querySelector('.n9')
 n10 =  document.querySelector('.n10')
 
-deleteAll.addEventListener('click',()=> {
-
-  localStorage.setItem("n1", "Nota 1");
-  localStorage.setItem("n2", "Nota 2");
-  localStorage.setItem("n3", "Nota 3");
-  localStorage.setItem("n4", "Nota 4");
-  localStorage.setItem("n5", "Nota 5");
-  localStorage.setItem("n6", "Nota 6");
-  localStorage.setItem("n7", "Nota 7");
-  localStorage.setItem("n8", "Nota 8");
-  localStorage.setItem("n9", "Nota 9");
-  localStorage.setItem("n10", "Nota 10");
-
-
-location.reload();
-
-})
 n1.addEventListener('click', ()=>{
   prueba = n1
   crear()
@@ -78,8 +61,6 @@ n10.addEventListener('click', ()=>{
   crear()
 })
 
-
-
 async function crear (){
   const { value: text } = await Swal.fire({
     input: 'textarea',
@@ -124,14 +105,23 @@ async function crear (){
   if (prueba == n10) {
     localStorage.setItem("n10", text);
   }
-
 }
 
-
-
+deleteAll.addEventListener('click',()=> {
+  localStorage.setItem("n1", "Nota 1");
+  localStorage.setItem("n2", "Nota 2");
+  localStorage.setItem("n3", "Nota 3");
+  localStorage.setItem("n4", "Nota 4");
+  localStorage.setItem("n5", "Nota 5");
+  localStorage.setItem("n6", "Nota 6");
+  localStorage.setItem("n7", "Nota 7");
+  localStorage.setItem("n8", "Nota 8");
+  localStorage.setItem("n9", "Nota 9");
+  localStorage.setItem("n10", "Nota 10");
+  location.reload();
+})
 
 function getNotes(){
-  console.log(localStorage.getItem("n1"))
   n1.innerText = localStorage.getItem("n1");
   n2.innerText = localStorage.getItem("n2");
   n3.innerText = localStorage.getItem("n3");
@@ -142,7 +132,6 @@ function getNotes(){
   n8.innerText = localStorage.getItem("n8");
   n9.innerText = localStorage.getItem("n9");
   n10.innerText = localStorage.getItem("n10");
-  
 }
 
 getNotes()

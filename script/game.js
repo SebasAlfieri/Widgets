@@ -111,7 +111,6 @@ scissor.addEventListener("click", () => {
   conteo();
 
   setTimeout(() => {
-    console.log(x);
     if (x == 1) {
       mano1.style.backgroundImage = "url(../img/scissors.png)";
       mano2.style.backgroundImage = "url(../img/scissors.png)";
@@ -140,7 +139,6 @@ papper.addEventListener("click", () => {
   conteo();
 
   setTimeout(() => {
-    console.log(x);
     if (x == 1) {
       mano1.style.backgroundImage = "url(../img/papper.png)";
       mano2.style.backgroundImage = "url(../img/scissors.png)";
@@ -169,7 +167,6 @@ rock.addEventListener("click", () => {
   conteo();
 
   setTimeout(() => {
-    console.log(x);
     if (x == 1) {
       mano1.style.backgroundImage = "url(../img/rock.png)";
       mano2.style.backgroundImage = "url(../img/scissors.png)";

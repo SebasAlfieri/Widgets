@@ -1,42 +1,62 @@
 #clockBody{
   overflow: hidden;
-}
 
-.mainClock{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-}
+  .mainClock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
 
-.nightVid{
-  position: absolute;
-  width: 100vw;
-  z-index: 0;
-}
+    .nightVid{
+      position: absolute;
+      width: 100vw;
+      z-index: 0;
+    }
 
-.clockContainer{
-  font-family: clock;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  border: 5px solid white;
-  box-shadow: 0px 0px 30px white;
-  color: #c3d1db;
-  font-size: 20rem;
-  width: 90%;
-  height: 80%;
-  background-color: rgba(40, 37, 37, 0.654);
-  z-index: 10;
-}
+    .clockContainer{
+      font-family: clock;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      border: 5px solid white;
+      box-shadow: 0px 0px 30px white;
+      color: #c3d1db;
+      font-size: 20rem;
+      width: 90%;
+      height: 80%;
+      background-color: rgba(40, 37, 37, 0.654);
+      z-index: 10;
 
-#clock{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 90%;
+      #clock{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90%;
+      }
+
+      .alarmContainer{
+        height: 10%;
+        display: flex;
+        font-size: 1rem;
+        font-family: Arial, Helvetica, sans-serif;
+        transition: 1s;
+        opacity: 0;
+
+        .alarmInput{
+          width: 8vw;
+          text-align: center;
+          color: #ffffff;
+          background-color: #393434;
+          margin: 10px;
+          box-shadow: 0px 0px 10px white;
+          border: 2px solid white;
+          text-decoration: none;
+        }
+      }
+    }
+  }
 }
 
 #nightMode,
@@ -62,8 +82,11 @@
     box-shadow: 0px 0px 10px white;
     border: 2px solid white;
     text-decoration: none;
-    // filter: drop-shadow(0px 0px 5px white);
   }
+}
+
+#dayMode{
+  display: none;
 }
 
 #alarmBtn{
@@ -88,35 +111,10 @@
       box-shadow: 0px 0px 10px white;
       border: 2px solid white;
       text-decoration: none;
-      // filter: drop-shadow(0px 0px 5px white);
     }
 }
 
 
-#dayMode{
-  display: none;
-}
 
-.alarmContainer{
-  height: 10%;
-  display: flex;
-  font-size: 1rem;
-  font-family: Arial, Helvetica, sans-serif;
-}
 
-.alarmInput{
-  width: 8vw;
-  text-align: center;
-  color: #ffffff;
-  background-color: #393434;
-  margin: 10px;
-  box-shadow: 0px 0px 10px white;
-  border: 2px solid white;
-  text-decoration: none;
-}
 
-.alarmContainer{
-  display: flex;
-  transition: 1s;
-  opacity: 0;
-}

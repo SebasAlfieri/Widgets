@@ -13,8 +13,6 @@ async function randomQuote() {
   const response = await fetch("../script/quotes.json");
   const data = await response.json();
   var x = Math.floor(Math.random() * 103);
-  console.log(data.quotes[x].quote);
-  console.log(data.quotes[x].author);
 
   randomColor();
 

@@ -7,7 +7,7 @@
   background-color: #453f3f;
 }
 
-.secContainer {
+.mainContainer .secContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,7 +17,7 @@
   background-color: #fefffe;
 }
 
-.widRow {
+.mainContainer .secContainer .widRow {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -25,7 +25,7 @@
   width: 100%;
 }
 
-.widget {
+.mainContainer .secContainer .widRow .widget {
   background-color: #453f3f;
   width: 20%;
   height: 85%;
@@ -34,36 +34,32 @@
   outline: 3px solid #453f3f;
 }
 
-.widget:hover {
+.mainContainer .secContainer .widRow .widget:hover {
   transform: scale(1.1);
   outline: 3px solid #453f3f;
 }
 
-.tituloPdt {
+.mainContainer .secContainer .widRow .tituloPdt {
   background: url(../img/titulo1.jpg) no-repeat center/cover;
 }
 
-.tituloClock {
+.mainContainer .secContainer .widRow .tituloClock {
   background: url(../img/clockBack.jpg) no-repeat center/cover;
 }
 
-.tituloQuotes {
+.mainContainer .secContainer .widRow .tituloQuotes {
   background: url(../img/quotesback.jpg) no-repeat center/cover;
 }
 
-.tituloWeather {
+.mainContainer .secContainer .widRow .tituloWeather {
   background: url(../img/climaBack.jpg) no-repeat center/cover;
 }
 
-.tituloNotes {
+.mainContainer .secContainer .widRow .tituloNotes {
   background: url(../img/notesBack.jpg) no-repeat center/cover;
 }
 
-.tituloShop {
-  background: url(../img/shopBack.jpg) no-repeat center/cover;
-}
-
-.buyBg {
+.mainContainer .secContainer .widRow .tituloNotes .buyBg {
   outline: 3px solid #453f3f;
   border-radius: 5px;
   display: flex;
@@ -75,14 +71,18 @@
   z-index: 10;
 }
 
-.buyBgImg {
+.mainContainer .secContainer .widRow .tituloNotes .buyBg .buyBgImg {
   width: 100%;
   height: 100%;
 }
 
-.buyBgImg:hover {
+.mainContainer .secContainer .widRow .tituloNotes .buyBg .buyBgImg:hover {
   background: url(../img/lock.png) no-repeat center/cover;
   background-size: 50%;
+}
+
+.mainContainer .secContainer .widRow .tituloShop {
+  background: url(../img/shopBack.jpg) no-repeat center/cover;
 }
 
 .gameMain {
@@ -212,7 +212,7 @@
   overflow: hidden;
 }
 
-.mainClock {
+#clockBody .mainClock {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -220,13 +220,13 @@
   height: 100vh;
 }
 
-.nightVid {
+#clockBody .mainClock .nightVid {
   position: absolute;
   width: 100vw;
   z-index: 0;
 }
 
-.clockContainer {
+#clockBody .mainClock .clockContainer {
   font-family: clock;
   display: flex;
   justify-content: center;
@@ -242,11 +242,31 @@
   z-index: 10;
 }
 
-#clock {
+#clockBody .mainClock .clockContainer #clock {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 90%;
+}
+
+#clockBody .mainClock .clockContainer .alarmContainer {
+  height: 10%;
+  display: flex;
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: 1s;
+  opacity: 0;
+}
+
+#clockBody .mainClock .clockContainer .alarmContainer .alarmInput {
+  width: 8vw;
+  text-align: center;
+  color: #ffffff;
+  background-color: #393434;
+  margin: 10px;
+  box-shadow: 0px 0px 10px white;
+  border: 2px solid white;
+  text-decoration: none;
 }
 
 #nightMode,
@@ -277,6 +297,10 @@
   text-decoration: none;
 }
 
+#dayMode {
+  display: none;
+}
+
 #alarmBtn {
   position: absolute;
   display: flex;
@@ -303,34 +327,6 @@
   text-decoration: none;
 }
 
-#dayMode {
-  display: none;
-}
-
-.alarmContainer {
-  height: 10%;
-  display: flex;
-  font-size: 1rem;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.alarmInput {
-  width: 8vw;
-  text-align: center;
-  color: #ffffff;
-  background-color: #393434;
-  margin: 10px;
-  box-shadow: 0px 0px 10px white;
-  border: 2px solid white;
-  text-decoration: none;
-}
-
-.alarmContainer {
-  display: flex;
-  transition: 1s;
-  opacity: 0;
-}
-
 #quoteBody {
   display: flex;
   height: 100vh;
@@ -340,7 +336,7 @@
   transition: 10s;
 }
 
-#quoteBtn {
+#quoteBody #quoteBtn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -355,7 +351,7 @@
   cursor: pointer;
 }
 
-#quoteBtn:hover {
+#quoteBody #quoteBtn:hover {
   opacity: 1;
   transform: scale(1.05);
 }
@@ -368,7 +364,33 @@
   height: 100vh;
 }
 
-.wContainer {
+#wBody .wNav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 5vh;
+  background-color: #fff;
+}
+
+#wBody .wNav .wNavDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #e9e0e0;
+}
+
+#wBody .wNav .wNavDiv:hover {
+  background-color: #312f2f;
+  color: white;
+  cursor: pointer;
+}
+
+#wBody .wContainer {
   display: grid;
   height: 50vh;
   width: 30vw;
@@ -380,7 +402,7 @@
   border: 2px solid black;
 }
 
-#localidad {
+#wBody .wContainer #localidad {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -389,7 +411,7 @@
   font-size: 2.5rem;
 }
 
-#iconCont {
+#wBody .wContainer #maxmin {
   grid-area: icono;
   display: flex;
   flex-direction: column;
@@ -397,7 +419,7 @@
   align-items: center;
 }
 
-#temp {
+#wBody .wContainer #temp {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -405,7 +427,7 @@
   font-size: 3rem;
 }
 
-#data {
+#wBody .wContainer #data {
   grid-area: data;
   display: flex;
   justify-content: flex-end;
@@ -413,7 +435,7 @@
   border-top: 1px solid black;
 }
 
-#dataBox {
+#wBody .wContainer #data #dataBox {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -424,33 +446,7 @@
   height: 100%;
 }
 
-.wNav {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 5vh;
-  background-color: #fff;
-}
-
-.wNavDiv {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  background-color: #e9e0e0;
-}
-
-.wNavDiv:hover {
-  background-color: #312f2f;
-  color: white;
-  cursor: pointer;
-}
-
-.backWeather {
+#wBody .backWeather {
   margin-top: 10vh;
 }
 
@@ -463,11 +459,7 @@
   grid-template-rows: 10fr 10fr 2fr;
 }
 
-#deleteAll {
-  grid-area: btn;
-}
-
-.note {
+#notesGrid .note {
   display: flex;
   word-wrap: break-word;
   white-space: pre-wrap;
@@ -478,44 +470,48 @@
   overflow-y: auto;
 }
 
-.n1 {
+#notesGrid .n1 {
   grid-area: n1;
 }
 
-.n2 {
+#notesGrid .n2 {
   grid-area: n2;
 }
 
-.n3 {
+#notesGrid .n3 {
   grid-area: n3;
 }
 
-.n4 {
+#notesGrid .n4 {
   grid-area: n4;
 }
 
-.n5 {
+#notesGrid .n5 {
   grid-area: n5;
 }
 
-.n6 {
+#notesGrid .n6 {
   grid-area: n6;
 }
 
-.n7 {
+#notesGrid .n7 {
   grid-area: n7;
 }
 
-.n8 {
+#notesGrid .n8 {
   grid-area: n8;
 }
 
-.n9 {
+#notesGrid .n9 {
   grid-area: n9;
 }
 
-.n10 {
+#notesGrid .n10 {
   grid-area: n10;
+}
+
+#deleteAll {
+  grid-area: btn;
 }
 
 .shopBg {
@@ -528,7 +524,7 @@
   background: linear-gradient(180deg, #947bd3 54%, #f0a7a0 89%);
 }
 
-.shopContainer {
+.shopBg .shopContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -541,7 +537,7 @@
   background-color: rgba(255, 255, 255, 0.295);
 }
 
-.shopContainer .showValor {
+.shopBg .shopContainer .showValor {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -549,27 +545,27 @@
   background-color: #F0A7A0;
 }
 
-.shopContainer .showValor .valorText {
+.shopBg .shopContainer .showValor .valorText {
   width: 100%;
 }
 
-.shopContainer .showValor #valorMostrar {
+.shopBg .shopContainer .showValor #valorMostrar {
   text-align: center;
   width: 100%;
 }
 
-.shopContainer .shopInputs {
+.shopBg .shopContainer .shopInputs {
   margin-top: 5vh;
   margin-bottom: 5vh;
   height: 20%;
 }
 
-.shopContainer .shopInputs input {
+.shopBg .shopContainer .shopInputs input {
   background-color: #F0A7A0;
   border: 1px solid #05299E;
 }
 
-.shopContainer .listContainer {
+.shopBg .shopContainer .listContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -578,14 +574,14 @@
   overflow-y: auto;
 }
 
-.shopContainer .list {
+.shopBg .shopContainer .list {
   width: 70%;
   background-color: #fff;
   text-align: center;
   margin-bottom: 5vh;
 }
 
-.shopContainer .list .productos {
+.shopBg .shopContainer .list .productos {
   display: flex;
   width: 100%;
   justify-content: space-evenly;

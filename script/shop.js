@@ -49,7 +49,6 @@ class producto {
 
 function nuevo () {
   let objeto = new producto (objetos.value,precios.value,cantidades.value)
-  console.log(objeto)
   objeto.crearCaja()
   objeto.totale()
 }
