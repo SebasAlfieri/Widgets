@@ -14,7 +14,7 @@
   align-items: center;
   width: 90%;
   height: 80%;
-  background-color: #FEFFFE;
+  background-color: #fefffe;
 }
 
 .widRow {
@@ -36,6 +36,7 @@
 
 .widget:hover {
   transform: scale(1.1);
+  outline: 3px solid #453f3f;
 }
 
 .tituloPdt {
@@ -52,6 +53,36 @@
 
 .tituloWeather {
   background: url(../img/climaBack.jpg) no-repeat center/cover;
+}
+
+.tituloNotes {
+  background: url(../img/notesBack.jpg) no-repeat center/cover;
+}
+
+.tituloShop {
+  background: url(../img/shopBack.jpg) no-repeat center/cover;
+}
+
+.buyBg {
+  outline: 3px solid #453f3f;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(92, 86, 86, 0.815);
+  z-index: 10;
+}
+
+.buyBgImg {
+  width: 100%;
+  height: 100%;
+}
+
+.buyBgImg:hover {
+  background: url(../img/lock.png) no-repeat center/cover;
+  background-size: 50%;
 }
 
 .gameMain {
@@ -200,6 +231,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   border: 5px solid white;
   box-shadow: 0px 0px 30px white;
   color: #c3d1db;
@@ -208,6 +240,13 @@
   height: 80%;
   background-color: rgba(40, 37, 37, 0.654);
   z-index: 10;
+}
+
+#clock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
 }
 
 #nightMode,
@@ -238,8 +277,58 @@
   text-decoration: none;
 }
 
+#alarmBtn {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 85vh;
+  right: 3vw;
+  width: 50px;
+  height: 50px;
+  color: #FEFFFE;
+  font-size: 3rem;
+  box-shadow: 0px 2px 3px black;
+  border-radius: 50%;
+  background-color: #393434;
+  transition: 0.3s;
+  z-index: 20;
+}
+
+#alarmBtn:hover {
+  transform: scale(1.2);
+  color: #FEFFFE;
+  box-shadow: 0px 0px 10px white;
+  border: 2px solid white;
+  text-decoration: none;
+}
+
 #dayMode {
   display: none;
+}
+
+.alarmContainer {
+  height: 10%;
+  display: flex;
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.alarmInput {
+  width: 8vw;
+  text-align: center;
+  color: #ffffff;
+  background-color: #393434;
+  margin: 10px;
+  box-shadow: 0px 0px 10px white;
+  border: 2px solid white;
+  text-decoration: none;
+}
+
+.alarmContainer {
+  display: flex;
+  transition: 1s;
+  opacity: 0;
 }
 
 #quoteBody {
@@ -284,7 +373,7 @@
   height: 50vh;
   width: 30vw;
   background-color: white;
-  grid-template-areas: "localidad localidad"  "temp icono" "data data";
+  grid-template-areas: "localidad localidad" "temp icono" "data data";
   grid-template-columns: 5fr 6fr;
   grid-template-rows: 3fr 5fr 5fr;
   box-shadow: 10px 10px 10px black;
@@ -298,11 +387,6 @@
   background-color: #b1e4e4;
   grid-area: localidad;
   font-size: 2.5rem;
-}
-
-#wIcon {
-  border: 1px solid white;
-  border-radius: 50%;
 }
 
 #iconCont {
@@ -370,6 +454,145 @@
   margin-top: 10vh;
 }
 
+#notesGrid {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-areas: "n1 n2 n3 n4 n5"  "n6 n7 n8 n9 n10" "btn btn btn btn btn";
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 10fr 10fr 2fr;
+}
+
+#deleteAll {
+  grid-area: btn;
+}
+
+.note {
+  display: flex;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  word-break: break-word;
+  outline: 1px solid black;
+  text-align: center;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.n1 {
+  grid-area: n1;
+}
+
+.n2 {
+  grid-area: n2;
+}
+
+.n3 {
+  grid-area: n3;
+}
+
+.n4 {
+  grid-area: n4;
+}
+
+.n5 {
+  grid-area: n5;
+}
+
+.n6 {
+  grid-area: n6;
+}
+
+.n7 {
+  grid-area: n7;
+}
+
+.n8 {
+  grid-area: n8;
+}
+
+.n9 {
+  grid-area: n9;
+}
+
+.n10 {
+  grid-area: n10;
+}
+
+.shopBg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: #947bd3;
+  background: linear-gradient(180deg, #947bd3 54%, #f0a7a0 89%);
+}
+
+.shopContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  width: 50vw;
+  height: 70vh;
+  border-radius: 20px;
+  border: 3px solid #05299E;
+  background-color: rgba(255, 255, 255, 0.295);
+}
+
+.shopContainer .showValor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #F0A7A0;
+}
+
+.shopContainer .showValor .valorText {
+  width: 100%;
+}
+
+.shopContainer .showValor #valorMostrar {
+  text-align: center;
+  width: 100%;
+}
+
+.shopContainer .shopInputs {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  height: 20%;
+}
+
+.shopContainer .shopInputs input {
+  background-color: #F0A7A0;
+  border: 1px solid #05299E;
+}
+
+.shopContainer .listContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.shopContainer .list {
+  width: 70%;
+  background-color: #fff;
+  text-align: center;
+  margin-bottom: 5vh;
+}
+
+.shopContainer .list .productos {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  background-color: #F0A7A0;
+  border: 1px solid black;
+}
+
 @font-face {
   font-family: clock;
   src: url(../@font-face/alarmclock.ttf);
@@ -378,6 +601,11 @@
 * {
   padding: 0;
   margin: 0;
+}
+
+#backNotes {
+  top: 90vh;
+  left: 0;
 }
 
 .backButton {

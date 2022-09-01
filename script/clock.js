@@ -2,8 +2,13 @@ video = document.querySelector('.nightVid');
 nightMode = document.querySelector('#nightMode');
 dayMode = document.querySelector('#dayMode')
 clockContainer = document.querySelector('.clockContainer')
-
-
+alarmBtn = document.querySelector('#alarmBtn')
+var audio = new Audio('../img/sound.mp3');
+hora = document.querySelector('#hora')
+minuto = document.querySelector('#minuto')
+segundo = document.querySelector('#segundo')
+amOPm = document.querySelector('#amOPm')
+alarmContainer = document.querySelector('.alarmContainer')
 
 nightMode.addEventListener('click',()=>{
   nightMode.style.display = "none";
@@ -12,7 +17,6 @@ nightMode.addEventListener('click',()=>{
   clockContainer.style.border = "5px solid rgb(0, 0, 0)";
   clockContainer.style.backgroundColor = "rgba(255, 255, 255, 0.6)";
   clockContainer.style.color = "rgb(0, 0, 0)";
-
 })
 
 dayMode.addEventListener('click',()=>{
@@ -24,7 +28,9 @@ dayMode.addEventListener('click',()=>{
   clockContainer.style.color = "#c3d1db";
 })
 
-
+function alarm (){
+  audio.play();
+}
 
 setInterval(showTime, 1000);
 function showTime() {
@@ -42,6 +48,9 @@ function showTime() {
         hr = 12;
         am_pm = "AM";
     }
+    if (hora.value == hour && minuto.value == min && segundo.value == sec && amOPm.value === am_pm){
+      alarm()
+    }
  
     hour = hour < 10 ? "0" + hour : hour;
     min = min < 10 ? "0" + min : min;
@@ -53,5 +62,11 @@ function showTime() {
     document.getElementById("clock")
             .innerHTML = currentTime;
 }
+
+alarmBtn.addEventListener('click',()=>{
+  alarmContainer.style.opacity = "1"
+})
+
 showTime();
+
 

@@ -8,40 +8,36 @@
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
   <link rel="stylesheet" href="../styles/style.css">
-  <title>Piedra papel tijera</title>
+  <title>Shop List</title>
 </head>
-<body>
-  <div class="gameMain">
-    <div class="gameContainer">
-      <div class="manos">
-        <div class="mano1">
-          <div class="manoBg">
-            <div id="mano1" class="manoImg"></div>
-          </div>
-        </div>
-        <div class="vs"></div>
-        <div class="mano2">
-          <div class="manoBg">
-            <div id="mano2" class="manoImg"></div>
-          </div>
-        </div>
-      </div>
-      <div class="manoBottom">
-        <div class="buttonBg" id="bscissor">
-          <div class="playButton" id="scissor"></div>
-        </div>
-        <div class="buttonBg" id="brock">
-          <div class="playButton" id="rock"></div>
-        </div>
-        <div class="buttonBg" id="bpapper">
-          <div class="playButton" id="papper"></div>
-        </div>
-      </div>
+<body class="shopBg">
+  <div class="shopContainer">
+    <div class="shopInputs">
+      <input type="text" name="" id="objetos" placeholder="Que vas a comprar" value="">
+      <input type="number" name="" id="precios" placeholder="Precio Aprox c/u" value="">
+      <select id="cantidades">
+        <option value="">Cantidad</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      <input type="button" value="Agregar" id="agregar">
+    </div>
+    <div class="listContainer">
+      <div class="list"></div>
+    </div>
+
+    <div class="showValor">
+      <div class="valorText">Coste Total:</div>
+      <div id="valorMostrar">$ 0</div>
     </div>
   </div>
+
   <a href="../index.html" class="backButton"><i class="fas fa-angle-double-left"></i></a>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src="../script/game.js"></script>
+  <script src="../script/shop.js"></script>
 </body>
 </html>
