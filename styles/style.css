@@ -461,6 +461,7 @@
 
 #notesGrid .note {
   display: flex;
+  font-weight: 600;
   word-wrap: break-word;
   white-space: pre-wrap;
   word-break: break-word;
@@ -512,6 +513,8 @@
 
 #deleteAll {
   grid-area: btn;
+  letter-spacing: 5px;
+  font-weight: 600;
 }
 
 .shopBg {
@@ -520,8 +523,7 @@
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background: #947bd3;
-  background: linear-gradient(180deg, #947bd3 54%, #f0a7a0 89%);
+  background-color: rgba(14, 13, 13, 0.719);
 }
 
 .shopBg .shopContainer {
@@ -533,7 +535,7 @@
   width: 50vw;
   height: 70vh;
   border-radius: 20px;
-  border: 3px solid #05299E;
+  border: 2px solid white;
   background-color: rgba(255, 255, 255, 0.295);
 }
 
@@ -542,7 +544,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #F0A7A0;
+  background-color: #393434;
+  outline: 2px solid white;
+  color: #c3d1db;
 }
 
 .shopBg .shopContainer .showValor .valorText {
@@ -558,11 +562,21 @@
   margin-top: 5vh;
   margin-bottom: 5vh;
   height: 20%;
+  color: #c3d1db;
 }
 
 .shopBg .shopContainer .shopInputs input {
-  background-color: #F0A7A0;
-  border: 1px solid #05299E;
+  background-color: #393434;
+  border: 2px solid white;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.shopBg .shopContainer .shopInputs select {
+  background-color: #393434;
+  border: 2px solid white;
+  border-radius: 5px;
+  text-align: center;
 }
 
 .shopBg .shopContainer .listContainer {
@@ -584,9 +598,11 @@
 .shopBg .shopContainer .list .productos {
   display: flex;
   width: 100%;
+  color: #c3d1db;
   justify-content: space-evenly;
-  background-color: #F0A7A0;
-  border: 1px solid black;
+  background-color: #393434;
+  outline: 2px solid white;
+  overflow-x: auto;
 }
 
 @font-face {
