@@ -1,6 +1,6 @@
 const APIKEY = "27204bd43703cfc1ab3feabd40ead51e";
 temp = document.querySelector("#temp");
-term = document.querySelector("#term");
+timeNow = document.querySelector("#timeNow");
 localidad = document.querySelector("#localidad");
 tempMax = document.querySelector("#tempMax");
 tempMin = document.querySelector("#tempMin");
@@ -23,10 +23,11 @@ function fetchBA() {
   )
     .then((resp) => resp.json())
     .then((data) => {
+      console.log(data)
       temp.innerText = `${data.current_weather.temperature}°C`;
       tempMax.innerText = `Max ${data.daily.temperature_2m_max[0]}°C`;
       tempMin.innerText = `Min ${data.daily.temperature_2m_max[0]}°C`;
-      term.innerText = `Sens. Termica: ${data.current_weather.windspeed}°C`;
+      timeNow.innerText = `Fecha/Hora: ${data.current_weather.time}`;
       termMax.innerText = `Termica Max: ${data.daily.apparent_temperature_max[0]}°C`;
       termMin.innerText = `Termica Min: ${data.daily.apparent_temperature_min[0]}°C`;
     });
@@ -36,6 +37,7 @@ buenosAires.addEventListener("click", () => {
   pais = "latitude=-34.55&longitude=-58.55";
   localidad.innerText = `Buenos Aires`;
   fetchBA();
+
 });
 
 chile.addEventListener("click", () => {
