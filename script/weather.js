@@ -26,7 +26,7 @@ function fetchBA() {
       console.log(data)
       temp.innerText = `${data.current_weather.temperature}°C`;
       tempMax.innerText = `Max ${data.daily.temperature_2m_max[0]}°C`;
-      tempMin.innerText = `Min ${data.daily.temperature_2m_max[0]}°C`;
+      tempMin.innerText = `Min ${data.daily.temperature_2m_min[0]}°C`;
       timeNow.innerText = `Fecha/Hora: ${data.current_weather.time}`;
       termMax.innerText = `Termica Max: ${data.daily.apparent_temperature_max[0]}°C`;
       termMin.innerText = `Termica Min: ${data.daily.apparent_temperature_min[0]}°C`;
