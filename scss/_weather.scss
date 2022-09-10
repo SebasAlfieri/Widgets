@@ -12,7 +12,8 @@
     position: fixed;
     top: 0;
     width: 100%;
-    height: 5vh;
+    height: 10vh;
+    text-align: center;
     background-color: #fff;
     
     .wNavDiv {
@@ -34,7 +35,7 @@
   .wContainer {
     display: grid;
     height: 50vh;
-    width: 30vw;
+    width: 80vw;
     background-color: white;
     grid-template-areas:
       "localidad localidad"
@@ -98,11 +99,18 @@
 
 
 
+@media (min-width:1024px) {
 
-
-
-
-
+  #wBody {
+    .wNav {
+      height: 5vh;
+    }
+  
+    .wContainer {
+      width: 30vw;
+    }
+  }
+}
 
 
 

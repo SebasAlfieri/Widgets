@@ -12,7 +12,7 @@
     justify-content: center;
     align-items: center;
     background-color: #fff;
-    width: 50vw;
+    width: 90vw;
     height: 70vh;
     border-radius: 20px;
     border: 2px solid white;
@@ -39,6 +39,8 @@
     }
   
     .shopInputs{
+      display: flex;
+      flex-direction: column;
       margin-top: 5vh;
       margin-bottom: 5vh;
       height: 20%;
@@ -69,7 +71,7 @@
       }
   
       .list{
-        width: 70%;
+        width: 90%;
         background-color: #fff;
         text-align: center;
         margin-bottom: 5vh;
@@ -88,3 +90,32 @@
 }
 
 
+
+
+@media (min-width:1024px) {
+
+  .shopBg{
+  
+    .shopContainer{
+      width: 50vw;
+      height: 70vh;
+    
+      .shopInputs{
+        flex-direction: row;
+    
+        input{
+          height: 5vh;
+        }
+  
+        select{
+          height: 5vh;
+        }
+      }
+    
+        .list{
+          width: 70%;
+        }
+      }
+  }
+
+}

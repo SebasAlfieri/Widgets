@@ -1,13 +1,16 @@
 #notesGrid{
   display: grid;
   width: 100vw;
-  height: 100vh;
+  height: 300vh;
   grid-template-areas:
-    "n1 n2 n3 n4 n5" 
-    "n6 n7 n8 n9 n10"
-    "btn btn btn btn btn";
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 10fr 10fr 2fr;
+    "n1 n2" 
+    "n3 n4"
+    "n5 n6"
+    "n7 n8"
+    "n9 n10"
+    "btn btn";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 10fr 10fr 10fr 10fr 10fr 1fr;
 
   .note{
     display: flex;
@@ -70,4 +73,29 @@
 }
 
 
+#backNotes{
+  top: 92%;
+  left: 0;
+  position: fixed;
+}
 
+@media (min-width:1024px) {
+
+  #notesGrid{
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-areas:
+      "n1 n2 n3 n4 n5" 
+      "n6 n7 n8 n9 n10"
+      "btn btn btn btn btn";
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 10fr 10fr 2fr;
+  }
+
+  #backNotes{
+    top: 90vh;
+    left: 0;
+    position: absolute;
+  }
+}

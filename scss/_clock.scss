@@ -1,5 +1,4 @@
 #clockBody{
-  overflow: hidden;
 
   .mainClock{
     display: flex;
@@ -10,7 +9,8 @@
 
     .nightVid{
       position: absolute;
-      width: 100vw;
+      transform: rotate(90deg);
+      height: 100vw;
       z-index: 0;
     }
 
@@ -23,9 +23,9 @@
       border: 5px solid white;
       box-shadow: 0px 0px 30px white;
       color: #c3d1db;
-      font-size: 20rem;
+      font-size: 5rem;
       width: 90%;
-      height: 80%;
+      height: 30%;
       background-color: rgba(40, 37, 37, 0.654);
       z-index: 10;
 
@@ -37,15 +37,15 @@
       }
 
       .alarmContainer{
-        height: 10%;
+        height: 40%;
         display: flex;
-        font-size: 1rem;
+        font-size: 0.8rem;
         font-family: Arial, Helvetica, sans-serif;
         transition: 1s;
         opacity: 0;
 
         .alarmInput{
-          width: 8vw;
+          width: 15vw;
           text-align: center;
           color: #ffffff;
           background-color: #393434;
@@ -116,5 +116,39 @@
 
 
 
+@media (min-width:1024px) {
+
+  #clockBody{
+  
+    .mainClock{
+      width: 100vw;
+      height: 100vh;
+  
+      .nightVid{
+        transform: rotate(0deg);
+        width: 100vw;
+      }
+  
+      .clockContainer{
+        font-size: 20rem;
+        width: 90%;
+        height: 80%;
+  
+        #clock{
+          height: 90%;
+        }
+  
+        .alarmContainer{
+          height: 10%;
+          font-size: 1rem;
+  
+          .alarmInput{
+            width: 8vw;
+          }
+        }
+      }
+    }
+  }
+}
 
 

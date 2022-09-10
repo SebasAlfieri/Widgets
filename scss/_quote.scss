@@ -10,9 +10,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 8rem;
-    width: 70vw;
-    height: 40vh;
+    font-size: 3rem;
+    width: 90vw;
+    height: 20vh;
     background-color: white;
     border: 3px solid rgb(52, 49, 49);
     border-radius: 10px;
@@ -27,5 +27,13 @@
   }
 }
 
+@media (min-width:1024px) {
 
-
+  #quoteBody{
+    #quoteBtn{
+      font-size: 8rem;
+      width: 70vw;
+      height: 40vh;
+    }
+  }
+}

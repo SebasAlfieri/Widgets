@@ -1,6 +1,6 @@
 .mainContainer {
   width: 100vw;
-  height: 100vh;
+  height: 200vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,20 +12,21 @@
     justify-content: center;
     align-items: center;
     width: 90%;
-    height: 80%;
+    height: 96%;
     background-color: #fefffe;
 
     .widRow {
       display: flex;
       justify-content: space-evenly;
       align-items: center;
-      height: 45%;
+      flex-direction: column;
+      height: 50%;
       width: 100%;
 
       .widget {
         background-color: #453f3f;
-        width: 20%;
-        height: 85%;
+        width: 80%;
+        height: 30%;
         border-radius: 5px;
         transition: 0.3s;
         outline: 3px solid #453f3f;
@@ -83,12 +84,27 @@
   }
 }
 
+@media (min-width:768px) {
 
-
-
-
-
-
-
-
+  .mainContainer {
+    width: 100vw;
+    height: 100vh;
+  
+    .secContainer {
+      width: 90%;
+      height: 80%;
+  
+      .widRow {
+        flex-direction: row;
+        height: 45%;
+        width: 100%;
+  
+        .widget {
+          width: 20%;
+          height: 85%;
+        }
+      }
+    }
+  }
+}
 

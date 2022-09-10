@@ -23,7 +23,6 @@ function fetchBA() {
   )
     .then((resp) => resp.json())
     .then((data) => {
-      console.log(data)
       temp.innerText = `${data.current_weather.temperature}°C`;
       tempMax.innerText = `Max ${data.daily.temperature_2m_max[0]}°C`;
       tempMin.innerText = `Min ${data.daily.temperature_2m_min[0]}°C`;
