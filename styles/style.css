@@ -246,6 +246,10 @@
   }
 }
 
+#clockBody {
+  background-color: black;
+}
+
 #clockBody .mainClock {
   display: flex;
   justify-content: center;
@@ -256,8 +260,9 @@
 
 #clockBody .mainClock .nightVid {
   position: absolute;
-  transform: rotate(90deg);
-  height: 100vw;
+  opacity: 0;
+  width: 50px;
+  height: 50px;
   z-index: 0;
 }
 
@@ -368,8 +373,9 @@
     height: 100vh;
   }
   #clockBody .mainClock .nightVid {
-    transform: rotate(0deg);
+    height: 100vh;
     width: 100vw;
+    opacity: 1;
   }
   #clockBody .mainClock .clockContainer {
     font-size: 20rem;
