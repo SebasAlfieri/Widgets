@@ -1,5 +1,5 @@
 #clockBody{
-
+    background-color: black;
   .mainClock{
     display: flex;
     justify-content: center;
@@ -9,8 +9,9 @@
 
     .nightVid{
       position: absolute;
-      transform: rotate(90deg);
-      height: 100vw;
+      opacity: 0;
+      width: 50px;
+      height: 50px;
       z-index: 0;
     }
 
@@ -125,8 +126,9 @@
       height: 100vh;
   
       .nightVid{
-        transform: rotate(0deg);
+        height: 100vh;
         width: 100vw;
+        opacity: 1;
       }
   
       .clockContainer{
